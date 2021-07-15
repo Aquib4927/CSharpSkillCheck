@@ -11,10 +11,14 @@ namespace ProblemTwo_CompilationError
         public Employee ReportsTo { get; set; }
         public string ProjectCode { get; set; }
 
-        public DirectReport(Employee managerEmpObj,string pCode)
+        public DirectReport(int eID, string eName, int eLevel, DateTime eDoJ, Employee managerEmpObj, string pCode) : base(eID, eName, eLevel, eDoJ)
         {
             ReportsTo = managerEmpObj;
             ProjectCode = pCode;
+            EmpID = eID;
+            EmpName = eName;
+            EmpLevel = eLevel;
+            DateOfJoining = eDoJ;
         }
     }
 }
